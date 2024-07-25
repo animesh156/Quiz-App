@@ -8,12 +8,12 @@ export default function App() {
 	
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'What is the capital of India?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Kolkata', isCorrect: false },
+				{ answerText: 'Mumbai', isCorrect: false },
+				{ answerText: 'New Delhi', isCorrect: true },
+				{ answerText: 'Chennai', isCorrect: false },
 			],
 		},
 		{
@@ -85,17 +85,17 @@ export default function App() {
 	return (
 		<div className='app w-auto md:w-full lg:w-full container'>
 			{showScore ? (
-				<div className='score-section container'>
+				<div className='score-section container text-orange-400'>
 					
 					You scored {score} out of {questions.length}
 				</div>
 			) : (
 				<>
 					<div className='question-section w-auto md:w-full lg:w-full container'>
-						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+						<div className='question-count text-fuchsia-500'>
+							<span className= 'text-red-500' >Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						<div className='question-text text-yellow-300'>{questions[currentQuestion].questionText}</div>
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (

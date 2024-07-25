@@ -86,6 +86,8 @@ body {
     border: 5px solid #234668;
     cursor: pointer;
   }
+
+
   
   .correct {
     background-color: #2f922f;
@@ -101,6 +103,7 @@ body {
   
   button:focus {
     outline: none;
+   
   }
   
   button svg {
